@@ -1,0 +1,62 @@
+.response-div {
+    height: 500px;
+}
+
+.response-sub-div {
+    display: flex;
+}
+
+.response-label {
+    padding-right: 20px;
+    text-align: right;
+    width: 250px;
+}
+
+.response-textarea {
+    height: 475px;
+    width: 500px;
+}
+
+.system-div {
+    height: 200px;
+}
+
+.system-sub-div {
+    display: flex;
+}
+
+.system-label {
+    padding-right: 20px;
+    text-align: right;
+    width: 250px;
+}
+
+.system-textarea {
+    height: 175px;
+    width: 500px;
+}
+
+.prompt-div {
+    height: 200px;
+}
+
+.prompt-sub-div {
+    display: flex;
+}
+
+.prompt-label {
+    padding-right: 20px;
+    text-align: right;
+    width: 250px;
+}
+
+.prompt-textarea {
+    height: 175px;
+    width: 500px;
+}
+
+.prompt-button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
