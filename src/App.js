@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+import {submitPrompt} from "./Api";
+
 const Chat = () => {
 
     const [disableButton, setDisableButton] = useState(false);
@@ -8,16 +10,17 @@ const Chat = () => {
     const [systemCommand, setSystemCommand] = useState("");
     const [prompt, setPrompt] = useState("");
 
-    const submitPrompt = () => {
+    const submit = () => {
         setDisableButton(true);
 
         setResponse("");
 
-        console.log("Submit button clicked");
-        console.log(systemCommand);
-        console.log(prompt);
-
-        setResponse("Foo bar");
+        submitPrompt("", systemCommand, prompt).then(response => {
+            setResponse(response.responseAnswer);
+            if (response.responseSuccess === true) {
+                setPrompt("");
+            }
+        });
 
         setDisableButton(false);
     };
@@ -44,7 +47,7 @@ const Chat = () => {
                   <textarea className="prompt-textarea" onChange={(e) => setPrompt(e.target.value)}/>
               </div>
               <div className="prompt-button">
-                  <button disabled={disableButton} onClick={submitPrompt}>Submit</button>
+                  <button disabled={disableButton} onClick={submit}>Submit</button>
               </div>
           </div>
           <hr/>
