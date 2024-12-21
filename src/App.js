@@ -76,8 +76,8 @@ const Chat = () => {
                       onChange={(e) => setPrompt(e.target.value)}
                       value={prompt}/>
               </div>
-              <div className="prompt-button">
-                  <button disabled={disableButton} onClick={submit}>Submit</button>
+              <div className="prompt-button-div">
+                  <button className="prompt-button" disabled={disableButton} onClick={submit}>Submit</button>
               </div>
           </div>
           <hr/>

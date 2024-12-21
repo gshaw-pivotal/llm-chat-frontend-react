@@ -55,7 +55,7 @@
 }
 
 .prompt-div {
-    height: 200px;
+    height: 210px;
 }
 
 .prompt-sub-div {
@@ -73,8 +73,13 @@
     width: 500px;
 }
 
-.prompt-button {
+.prompt-button-div {
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+.prompt-button {
+    margin-top: 10px;
+    width: 150px;
 }
