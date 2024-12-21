@@ -59,28 +59,33 @@ const Chat = () => {
           </div>
           <hr/>
           <div className="system-div">
-              <div className="system-sub-div">
+              <div className="system-sub-spacer-div">
                   <span className="system-label">System Commands</span>
+              </div>
+              <div className="system-sub-div">
                   <textarea
                       className="system-textarea"
                       onChange={(e) => setSystemCommand(e.target.value)}
                       value={systemCommand}/>
               </div>
+              <div className="system-sub-spacer-div"></div>
           </div>
           <hr/>
           <div className="prompt-div">
-              <div className="prompt-sub-div">
+              <div className="prompt-sub-spacer-div">
                   <span className="prompt-label">Prompt Input</span>
+              </div>
+              <div className="prompt-sub-div">
                   <textarea
                       className="prompt-textarea"
                       onChange={(e) => setPrompt(e.target.value)}
                       value={prompt}/>
               </div>
-              <div className="prompt-button-div">
-                  <button className="prompt-button" disabled={disableButton} onClick={submit}>Submit</button>
-              </div>
+              <div className="prompt-sub-spacer-div"></div>
           </div>
-          <hr/>
+          <div className="prompt-button-div">
+              <button className="prompt-button" disabled={disableButton} onClick={submit}>Submit</button>
+          </div>
       </div>
     );
 };

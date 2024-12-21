@@ -37,16 +37,25 @@
 
 .system-div {
     height: 150px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .system-sub-div {
     display: flex;
 }
 
+.system-sub-spacer-div {
+    display: flex;
+    height: 125px;
+    justify-content: right;
+    width: 33%;
+}
+
 .system-label {
     padding-right: 20px;
     text-align: right;
-    width: 250px;
 }
 
 .system-textarea {
@@ -56,16 +65,25 @@
 
 .prompt-div {
     height: 210px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .prompt-sub-div {
     display: flex;
 }
 
+.prompt-sub-spacer-div {
+    display: flex;
+    height: 175px;
+    justify-content: right;
+    width: 33%;
+}
+
 .prompt-label {
     padding-right: 20px;
     text-align: right;
-    width: 250px;
 }
 
 .prompt-textarea {
@@ -80,6 +98,5 @@
 }
 
 .prompt-button {
-    margin-top: 10px;
     width: 150px;
 }
