@@ -37,14 +37,20 @@ const Chat = () => {
           <div className="system-div">
               <div className="system-sub-div">
                   <span className="system-label">System Commands</span>
-                  <textarea className="system-textarea" onChange={(e) => setSystemCommand(e.target.value)}/>
+                  <textarea
+                      className="system-textarea"
+                      onChange={(e) => setSystemCommand(e.target.value)}
+                      value={systemCommand}/>
               </div>
           </div>
           <hr/>
           <div className="prompt-div">
               <div className="prompt-sub-div">
                   <span className="prompt-label">Prompt Input</span>
-                  <textarea className="prompt-textarea" onChange={(e) => setPrompt(e.target.value)}/>
+                  <textarea
+                      className="prompt-textarea"
+                      onChange={(e) => setPrompt(e.target.value)}
+                      value={prompt}/>
               </div>
               <div className="prompt-button">
                   <button disabled={disableButton} onClick={submit}>Submit</button>
