@@ -1,3 +1,21 @@
+.model-div {
+    height: 50px;
+}
+
+.model-sub-div {
+    display: flex;
+}
+
+.model-label {
+    padding-right: 20px;
+    text-align: right;
+    width: 250px;
+}
+
+.model-select {
+    width: 510px;
+}
+
 .response-div {
     height: 500px;
 }
@@ -18,7 +36,7 @@
 }
 
 .system-div {
-    height: 200px;
+    height: 150px;
 }
 
 .system-sub-div {
@@ -32,7 +50,7 @@
 }
 
 .system-textarea {
-    height: 175px;
+    height: 125px;
     width: 500px;
 }
 

@@ -4,6 +4,28 @@ import {PromptResponse} from "./PromptResponse";
 
 const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:1234' : '';
 
+export async function getModels() {
+    let models = [];
+
+    const response = await fetch(`${API_URL}/v1/models`, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'content-type': 'application/json',
+        }
+    });
+
+    if (response.ok) {
+        let json = await response.json();
+
+        for (let i = 0; i < json.data.length; i++) {
+            models.push(json.data[i].id);
+        }
+    }
+
+    return models;
+}
+
 export async function submitPrompt(model, command, prompt) {
     //Prep request
     let messages = [];
@@ -25,7 +47,6 @@ export async function submitPrompt(model, command, prompt) {
             headers: {
                 'Accept': 'application/json',
                 'content-type': 'application/json',
-                // 'no-cors': true,
         },
         body: JSON.stringify(request)
     });
