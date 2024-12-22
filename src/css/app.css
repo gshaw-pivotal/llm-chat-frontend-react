@@ -9,7 +9,7 @@
 .model-label {
     padding-right: 20px;
     text-align: right;
-    width: 250px;
+    width: 125px;
 }
 
 .model-select {
@@ -27,7 +27,7 @@
 .response-label {
     padding-right: 20px;
     text-align: right;
-    width: 250px;
+    width: 125px;
 }
 
 .response-textarea {
