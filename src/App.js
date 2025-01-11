@@ -66,8 +66,6 @@ const Chat = () => {
             });
         }
 
-
-
         setDisableButton(false);
     };
 
@@ -76,24 +74,30 @@ const Chat = () => {
           <div className="model-div">
               <div className="model-sub-div">
                   <span className="model-label">Select Model</span>
-                  <select name="llm-1" className="model-select">
-                      <option onClick={(e) => setSelectedModel1("")}></option>
+                  <select name="llm-1" className="model-select"
+                          onChange={(e) => setSelectedModel1(e.target.value)}
+                          defaultValue={''}>
+                      <option></option>
                       {modelList.map(model => (
-                          <option onClick={(e) => setSelectedModel1(e.target.value)}>{model}</option>
+                          <option>{model}</option>
                       ))}
                   </select>
                   <span className="model-label">Select Model</span>
-                  <select name="llm-2" className="model-select">
-                      <option onClick={(e) => setSelectedModel2("")}></option>
+                  <select name="llm-2" className="model-select"
+                          onChange={(e) => setSelectedModel2(e.target.value)}
+                          defaultValue={''}>
+                      <option></option>
                       {modelList.map(model => (
-                          <option onClick={(e) => setSelectedModel2(e.target.value)}>{model}</option>
+                          <option>{model}</option>
                       ))}
                   </select>
                   <span className="model-label">Select Model</span>
-                  <select name="llm-3" className="model-select">
-                      <option onClick={(e) => setSelectedModel3("")}></option>
+                  <select name="llm-3" className="model-select"
+                          onChange={(e) => setSelectedModel3(e.target.value)}
+                          defaultValue={''}>
+                      <option></option>
                       {modelList.map(model => (
-                          <option onClick={(e) => setSelectedModel3(e.target.value)}>{model}</option>
+                          <option>{model}</option>
                       ))}
                   </select>
               </div>
